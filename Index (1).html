@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="Utf_8">
+        <title> biology difference </title>
+        <meta name="viewport" content="width=device-width, initial-scale=l,0">
+        <style>
+            *{
+              padding: 0;
+              margin: 0;
+              text-decoration: none;
+              list-style: none;
+              box-sizing: border-box;
+            }
+            body{
+              font-family: montserrat;
+            }
+            nav{
+              background: black;
+              height: 80px;
+              width: 100%;
+            }
+            label.logo{
+              color: white;
+              font-size: 35px;
+              line-height: 80px;
+              padding: 0 100px;
+              font-weight: bold;
+            }
+            nav ul{
+              float: right;
+              margin-right: 20px;
+            }
+            nav ul li{
+              display: inline-block;
+              line-height: 80px;
+              margin: 0 5px;
+            }
+            nav ul li a{
+              color: white;
+              font-size: 17px;
+              padding: 7px 13px;
+              border-radius: 3px;
+              text-transform: uppercase;
+            }
+            a.active,a:hover{
+              background: #1b9bff;
+              transition: .5s;
+            }
+            .checkbtn{
+              font-size: 30px;
+              color: white;
+              float: right;
+              line-height: 80px;
+              margin-right: 40px;
+              cursor: pointer;
+              display: none;
+            }
+            #check{
+              display: none;
+            }
+            @media (max-width: 952px){
+              label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+              }
+              nav ul li a{
+                font-size: 16px;
+              }
+            }
+            @media (max-width: 858px){
+              .checkbtn{
+                display: block;
+              }
+              ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #2c3e50;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+              }
+              nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+              }
+              nav ul li a{
+                font-size: 20px;
+              }
+              a:hover,a.active{
+                background: none;
+                color: #0082e6;
+              }
+              #check:checked ~ ul{
+                left: 0;
+              }
+            }
+
+            /*details*/
+            .sidemenu{
+                        position: fixed;
+                        top: 80px;
+                        right: 0px;
+                        height: 90vh;
+                        width: 300px;
+                        background-color: black;
+                        z-index: 1;
+                        padding-top: 100px;
+                        overflow-x: hidden;
+                        transition: all .5s;
+                    }
+                    .sidemenu a{
+                        padding: 8px 8px 8px 64px;
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: lightblue;
+                        display: block;
+                    }
+                    .sidemenu a:hover{
+                        color: mintcream;
+                    }
+                    /*close*/
+                    .sidemenu .closemenu{
+                        position: absolute;
+                        top: 0ex;
+                        left: -80px;
+                        font-size: 36px;
+                        margin-left: 32px;
+                    }
+        </style>
+        <script src="https://kit.fontawesome.com/yourcode.Js"></script>
+    </head>
+    <body>
+        <nav> 
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"> biology difference</label>
+        <ul>
+        <li><a href="#">الكورسات </a></li>
+        <li><a href="#">المجله العلميه </a></li>
+        <ii><a href="#">تحدي القراءة </a></li>
+        <li><a href="#"> الأحداث اخر الاخبار</a></li>
+        
+        <ii><a href="#" onclick="openFunction()">&#9776;</a></li>
+        </ul>
+        </nav>
+        <aside class="sidemenu" id="sidemenu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact us</a>
+          <a href="#" class="closemenu" onclick="closeFunction()">&times;</a>
+        </aside>
+      <!-- Javascript Code -->
+        <script>
+          //open function
+          function openFunction(){
+              document.getElementById("sidemenu").style.width="300px";
+              document.getElementById("openmenu").style.marginLeft="300px";
+          }
+
+          function closeFunction(){
+              document.getElementById("sidemenu").style.width="0px";
+              document.getElementById("openmenu").style.marginLeft="0px";
+              document.getElementById("openmenu").innerHTML="&#9776;";
+          }
+        </script>
+      </body>
+</html>

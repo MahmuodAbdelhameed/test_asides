@@ -1,0 +1,85 @@
+<!-- 
+    Created By : Mahmuod Abd AL-Hamid
+    Start Date : 26-4-2021
+    End Date : 27-4-2021
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS CVode -->
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 20px 40px;
+        }
+        /*open*/
+        .openmenu{
+            font-size: 24px;
+            cursor: pointer;
+            transition: all .6s;
+        }
+        /*details*/
+        .sidemenu{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 87vh;
+            width: 300px;
+            background-color: purple;
+            z-index: 1;
+            padding-top: 100px;
+            overflow-x: hidden;
+            transition: all .5s;
+        }
+        .sidemenu a{
+            padding: 8px 8px 8px 64px;
+            text-decoration: none;
+            font-size: 20px;
+            color: lightblue;
+            display: block;
+        }
+        .sidemenu a:hover{
+            color: mintcream;
+
+        }
+        /*close*/
+        .sidemenu .closemenu{
+            position: absolute;
+            top: 0ex;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 32px;
+        }
+
+    </style>
+    <title>Biology</title>
+</head>
+<body>
+    <!-- HTML Code -->
+    <div class="openmenu" id="openmenu" onclick="openFunction()">&#9776;</div>
+    <nav class="sidemenu" id="sidemenu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact us</a>
+        <a href="#" class="closemenu" onclick="closeFunction()">&times;</a>
+    </nav>
+
+    <!-- Javascript Code -->
+    <script>
+        //open function
+        function openFunction(){
+            document.getElementById("sidemenu").style.width="300px";
+            document.getElementById("openmenu").style.marginLeft="300px";
+        }
+
+        function closeFunction(){
+            document.getElementById("sidemenu").style.width="0px";
+            document.getElementById("openmenu").style.marginLeft="0px";
+            document.getElementById("openmenu").innerHTML="&#9776;";
+        }
+    </script>
+</body>
+</html>
